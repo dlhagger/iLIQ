@@ -1,4 +1,4 @@
-# iLIQ 
+# iLIQ individual Lick Instance Quantifier
 
 Firmware for an RP2040-based lickometer with:
 - MPR121 capacitive lick sensing (12 electrodes)
