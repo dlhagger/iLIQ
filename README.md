@@ -1,4 +1,4 @@
-# iLIQ individual Lick Instance Quantifier
+# RP2040 Lickometer
 
 Firmware for an RP2040-based lickometer with:
 - MPR121 capacitive lick sensing (12 electrodes)
@@ -9,6 +9,11 @@ Firmware for an RP2040-based lickometer with:
 - Recovery behavior for SD and sensor faults
 
 This project is designed for low-latency touch capture while remaining robust to removable media and peripheral faults.
+
+## Hardware BOM
+
+- Source of truth for procurement: [DigiKey_BOM.xlsx](./DigiKey_BOM.xlsx)
+- Readable mirror: [HARDWARE_BOM.md](./HARDWARE_BOM.md)
 
 ## How It Works
 
@@ -126,11 +131,12 @@ Main libraries used:
 
 ## Project Layout
 
-- `RP2040_Lickometer.ino`: main state machine, UI, hardware integration
-- `SessionLogger.h/.cpp`: buffered CSV logger + SD recovery + timestamps
-- `ButtonDebouncer.h`: non-blocking button edge debounce
-- `tools/validate_log_csv.py`: CSV validator
-- `TESTING_CHECKLIST.md`: pointer to test section in this README
+- `Firmware/RP2040_Lickometer.ino`: main state machine, UI, hardware integration
+- `Firmware/SessionLogger.h/.cpp`: buffered CSV logger + SD recovery + timestamps
+- `Firmware/ButtonDebouncer.h`: non-blocking button edge debounce
+- `Firmware/tools/validate_log_csv.py`: CSV validator
+- `DigiKey_BOM.xlsx`: procurement/source-of-truth BOM
+- `HARDWARE_BOM.md`: hardware bill of materials
 
 ## Validation and Test Checklist
 
@@ -151,7 +157,7 @@ Peripheral recovery tests:
 
 CSV checks:
 ```bash
-python3 tools/validate_log_csv.py /path/to/log_directory
+python3 Firmware/tools/validate_log_csv.py /path/to/log_directory
 ```
 
 Expected:
