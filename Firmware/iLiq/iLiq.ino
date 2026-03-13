@@ -92,8 +92,8 @@ uint16_t touchCounts[12] = { 0 };
 // Sensor Parameters
 // =======================
 
-int CUSTOM_TOUCH_THRESHOLD = 2;
-int CUSTOM_RELEASE_THRESHOLD = 0;
+int CUSTOM_TOUCH_THRESHOLD = 4;
+int CUSTOM_RELEASE_THRESHOLD = 2;
 int CUSTOM_DEBOUNCE = 0;
 
 #ifndef _BV
